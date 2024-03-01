@@ -53,18 +53,78 @@
     </footer>
 
     <!-- Open the modal using ID.showModal() method -->
-    <dialog id="detail_modal" class="modal modal-bottom sm:modal-middle">
-      <div class="modal-box">
-        <h3 class="font-bold text-lg">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
-        <div class="modal-action">
-          <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
-          </form>
+
+    <!-- You can open the modal using ID.showModal() method -->
+<dialog id="detail_modal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+
+        <div class="flex justify-center mt-10 gap-4">
+
+
+          <!-- first card design -->
+            <div>
+                <div class="card w-[450px] h-[500px] border-2 bg-[#fef6f6] p-6">
+                    <h2 class="text-2xl font-semibold text-black">ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h2>
+                    <div class="flex gap-4 my-8">
+                      <div class="bg-white w-[140px] h-[80px] flex flex-col justify-center items-center text-center rounded-[15px]">
+                        <p class="text-[#03A30A] font-bold"><span>$10/month</span><span><br> Basic</span></p>
+                      </div>
+                      <div class="bg-white w-[140px] h-[80px] flex flex-col justify-center items-center text-center rounded-[15px]">
+                        <p class="text-[#F28927] font-bold"><span>$50/month</span><span> Pro</span></p>
+                      </div>
+                      <div class="bg-white w-[140px] h-[80px] flex flex-col justify-center items-center text-center rounded-[15px]">
+                        <p class="text-[#EB5757] font-bold"><span>Contact</span><span> Enterprise</span></p>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                      <div>
+                          <h2 class="text-2xl font-semibold text-black">Features</h2>
+                          <ul class="list-disc mt-3 pl-8 text-base text-[#585858]">
+                            <li>Customizable responses</li>
+                            <li>Multilingual support</li>
+                            <li>Seamless integration</li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h2 class="text-2xl font-semibold text-black">Integrations</h2>
+                          <ul class="list-disc pl-8 mt-3 text-base text-[#585858]">
+                             <li>FB Messenger</li>
+                             <li>Slack</li>
+                             <li>Telegram</li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+
+
+          <!-- second card design -->
+
+            <div>
+                <div class="card w-[450px] h-[500px] border-2">
+                    <figure class="relative"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="bg-[#eb5757] w-[165px] h-[46px] rounded-[8px] absolute right-4 top-4 flex flex-col justify-center items-center">
+                        <h2 class="text-lg font-semibold text-white">94% accuracy</h2>
+                    </div>
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-semibold text-black">Hi, how are you doing today?</h2>
+                      <p class="text-base text-[#585858]">I'm doing well, thank you for asking. How can I assist you today?</p>
+                    </div>
+                  </div>
+            </div>
         </div>
-      </div>
-    </dialog>
+
+      <form method="dialog">
+        <div class="text-right">
+            <button class="btn">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</dialog>
+
 
     <script src="apps.js"></script>
   </body>
