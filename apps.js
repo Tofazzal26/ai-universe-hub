@@ -10,13 +10,13 @@ const loadData = () => {
 
 
 const cardData = (data) => {
-    console.log(data);
+    
     const cardDetail = data.data.tools;
     const divContainer = document.getElementById('card-container');
     cardDetail.forEach((detail) => {
         const div = document.createElement('div');
         div.innerHTML = ` <div class="card border-2">
-                <figure><img class="h-[200px]" src="${detail?.image}" alt="Shoes" /></figure>
+                <figure class="p-6"><img class="h-[200px] rounded-[12px]" src="${detail?.image}" alt="Shoes" /></figure>
                 <div class="card-body">
                     <div class="border-b-2 space-y-1 pb-6">
                         <h2 class="text-2xl font-semibold text-black mb-4">Features</h2>
@@ -38,7 +38,7 @@ const cardData = (data) => {
                                 <p class="font-medium text-base text-[#575757]">${detail.published_in}</p>                             
                             </div>
                         </div>
-                        <div>
+                        <div onclick="modalDetail('${detail.id}')" class="cursor-pointer">
                                 <img class=" h-[50px] p-4 rounded-full bg-[#fef7f7]" src="images/right-arrow.png" alt="">
                         </div>
                     </div>
@@ -46,6 +46,21 @@ const cardData = (data) => {
             </div>`;
             divContainer.appendChild(div);
     })
+}
+
+
+const modalDetail = async (id) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/ai/tool/${id}`);
+    const data = await res.json();
+    const detail = data.data;
+    showModal(detail);
+} 
+
+
+const showModal = (detailData) => {
+    console.log(detailData);
+    
+    detail_modal.showModal();
 }
 
 
